@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:contentDescription="@string/now_playing"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +29,7 @@
         android:fontFamily="@font/kanit"
         android:text="@string/lewati"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -44,7 +45,7 @@
         android:fontFamily="@font/kanit"
         android:text="@string/lanjutkan"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -55,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="272dp"
         android:fontFamily="@font/kanit_bold"
-        android:text="Now Playing"
+        android:text="@string/now_playing"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,5 +76,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:text="Dapatkan informasi mengenai film\nyang sedang tayang saat ini." />
+        tools:text="@string/now_playing_caption" />
 </androidx.constraintlayout.widget.ConstraintLayout>

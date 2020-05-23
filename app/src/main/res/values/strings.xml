@@ -3,4 +3,15 @@
     <string name="lewati">Lewati</string>
     <string name="lanjutkan">Lanjutkan</string>
     <string name="mulai">Mulai</string>
+    <string name="daftar">Daftar</string>
+    <string name="cashless_caption">Gunakan E-Wallet untuk kemudahan\ndalam transaksi.</string>
+    <string name="cashless">Cashless</string>
+    <string name="pre_sale">Pre-Sale</string>
+    <string name="pre_sale_caption">Tidak perlu takut ketinggalan \nfilm-film terbaru.</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="now_playing_caption">Dapatkan informasi mengenai film\nyang sedang tayang saat ini.</string>
+    <string name="masuk">Masuk</string>
+    <string name="sign_in">Sign In</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
 </resources>
