@@ -18,4 +18,9 @@
     <string name="back">Back</string>
     <string name="nama">Nama</string>
     <string name="email">Alamat Email</string>
+    <string name="avatar">Avatar</string>
+    <string name="welcome">Selamat Datang,</string>
+    <string name="name_one">Baziyad Hummam</string>
+    <string name="simpan">Simpan</string>
+    <string name="tambah">Tambah</string>
 </resources>
