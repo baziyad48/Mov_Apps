@@ -14,4 +14,8 @@
     <string name="sign_in">Sign In</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="back">Back</string>
+    <string name="nama">Nama</string>
+    <string name="email">Alamat Email</string>
 </resources>
