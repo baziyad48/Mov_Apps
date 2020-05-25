@@ -36,4 +36,20 @@
     <string name="rating">7.8</string>
     <string name="sinopsis">A boy is given the ability to become an adult superhero in times of need with a single magic word.</string>
     <string name="cast"><![CDATA[Cast & Crew]]></string>
+    <string name="beli">Beli Tiket</string>
+    <string name="layar">Layar</string>
+    <string name="chair">Chair</string>
+    <string name="one">1</string>
+    <string name="six">6</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="b">B</string>
+    <string name="a">A</string>
+    <string name="c">C</string>
+    <string name="d">D</string>
+    <string name="e">E</string>
+    <string name="f">F</string>
+    <string name="note">Note</string>
 </resources>
