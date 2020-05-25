@@ -38,7 +38,7 @@
     <string name="cast"><![CDATA[Cast & Crew]]></string>
     <string name="beli">Beli Tiket</string>
     <string name="layar">Layar</string>
-    <string name="chair">Chair</string>
+    <string name="chair">D4, D5</string>
     <string name="one">1</string>
     <string name="six">6</string>
     <string name="two">2</string>
@@ -52,4 +52,13 @@
     <string name="e">E</string>
     <string name="f">F</string>
     <string name="note">Note</string>
+    <string name="checkout">Checkout</string>
+    <string name="date">20 Mei, 09.30 WIB</string>
+    <string name="location">Cinepolis Matos</string>
+    <string name="discount">Buy 1 Get 1</string>
+    <string name="price">IDR 25K</string>
+    <string name="total">Total</string>
+    <string name="saldo">Saldo</string>
+    <string name="batal">Batalkan</string>
+    <string name="bayar">Bayar Sekarang</string>
 </resources>
