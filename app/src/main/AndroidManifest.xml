@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Chair_Selection" />
+        <activity android:name=".Movie_Details" />
         <activity android:name=".Home" />
         <activity android:name=".Sign_Up_Photo" />
         <activity android:name=".Sign_Up" />

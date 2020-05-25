@@ -28,4 +28,12 @@
     <string name="home">Home</string>
     <string name="my_ticket">My Ticket</string>
     <string name="settings">Settings</string>
+    <string name="pilih_kursi">Pilih Kursi</string>
+    <string name="backdrop">Backdrop</string>
+    <string name="play">play</string>
+    <string name="shazam">Shazam!</string>
+    <string name="genre">Action, Family</string>
+    <string name="rating">7.8</string>
+    <string name="sinopsis">A boy is given the ability to become an adult superhero in times of need with a single magic word.</string>
+    <string name="cast"><![CDATA[Cast & Crew]]></string>
 </resources>
