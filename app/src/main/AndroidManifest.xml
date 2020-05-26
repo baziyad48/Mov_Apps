@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Edit_Profile" />
         <activity android:name=".Pay_Screen" />
         <activity android:name=".Chair_Selection" />
         <activity android:name=".Movie_Details" />
