@@ -8,7 +8,7 @@
     tools:context=".Splash_Screen">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/app_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/app_name"
