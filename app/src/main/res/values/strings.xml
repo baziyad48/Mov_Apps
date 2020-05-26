@@ -62,4 +62,7 @@
     <string name="batal">Batalkan</string>
     <string name="bayar">Bayar Sekarang</string>
     <string name="edit_profile">Edit Profile</string>
+    <string name="wallet">My Wallet</string>
+    <string name="top_up">Top Up</string>
+    <string name="transaksi">Detail Transaksi</string>
 </resources>
