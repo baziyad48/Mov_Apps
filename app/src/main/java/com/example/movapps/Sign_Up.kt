@@ -5,20 +5,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.sign__in.*
 import kotlinx.android.synthetic.main.sign__up.*
 import kotlinx.android.synthetic.main.sign__up.et_password
 import kotlinx.android.synthetic.main.sign__up.et_username
 
 class Sign_Up : AppCompatActivity() {
 
-    lateinit var mDatabase: DatabaseReference
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sign__up)
 
-        btn_back.setOnClickListener {
+        var mDatabase: DatabaseReference
+
+        textView15.setOnClickListener {
             onBackPressed()
         }
 
@@ -51,12 +50,9 @@ class Sign_Up : AppCompatActivity() {
                         } else {
                             val bundle = Bundle()
                             bundle.putString("username", et_username.text.toString())
-
-                            mDatabase.ref.child("balance").setValue(500)
-                            mDatabase.ref.child("email").setValue(et_email.text.toString())
-                            mDatabase.ref.child("name").setValue(et_name.text.toString())
-                            mDatabase.ref.child("password").setValue(et_password.text.toString())
-                            mDatabase.ref.child("username").setValue(et_username.text.toString())
+                            bundle.putString("name", et_name.text.toString())
+                            bundle.putString("password", et_password.text.toString())
+                            bundle.putString("email", et_email.text.toString())
 
                             val intent = Intent(this@Sign_Up, Sign_Up_Photo::class.java)
                             intent.putExtras(bundle)

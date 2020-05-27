@@ -12,12 +12,11 @@ import java.lang.ref.Reference
 
 class Sign_In : AppCompatActivity() {
 
-    lateinit var mDatabase: DatabaseReference
-    val USERNAME_KEY = "username"
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sign__in)
+
+        var mDatabase: DatabaseReference
 
         btn_register.setOnClickListener {
             val intent = Intent(this@Sign_In, Sign_Up::class.java)
@@ -47,11 +46,13 @@ class Sign_In : AppCompatActivity() {
 
                     override fun onDataChange(p0: DataSnapshot) {
                         if(p0.exists()) {
-                            var password = p0.child("password").getValue().toString()
+                            var password = p0.child("password").value.toString()
+
                             if(et_password.text.toString() == password) {
-                                val sharedPreferences = getSharedPreferences(USERNAME_KEY, Context.MODE_PRIVATE)
+                                val sharedPreferences = getSharedPreferences("MOV_APPS", Context.MODE_PRIVATE)
                                 //bisa tambah shared preferences lain misal nama, email, balance
-                                sharedPreferences.edit().putString("username", et_username.text.toString()).apply()
+                                sharedPreferences.edit().putString("username", p0.child("username").value.toString()).apply()
+                                sharedPreferences.edit().putString("name", p0.child("name").value.toString()).apply()
 
                                 val intent = Intent(this@Sign_In, Home::class.java)
                                 startActivity(intent)
