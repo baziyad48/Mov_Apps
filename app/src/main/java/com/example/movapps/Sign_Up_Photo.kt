@@ -73,7 +73,7 @@ class Sign_Up_Photo : AppCompatActivity() {
                 }.addOnCompleteListener {
                     val sharedPreferences = getSharedPreferences("MOV_APPS", Context.MODE_PRIVATE)
                     sharedPreferences.edit().putString("username", intent.getStringExtra("username")).apply()
-                    
+
                     val intent = Intent(this@Sign_Up_Photo, Home::class.java)
                     startActivity(intent)
                     finishAffinity()
