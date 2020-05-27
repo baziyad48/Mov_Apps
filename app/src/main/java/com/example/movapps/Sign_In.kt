@@ -15,7 +15,6 @@ class Sign_In : AppCompatActivity() {
     lateinit var mDatabase: DatabaseReference
     val USERNAME_KEY = "username"
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sign__in)
@@ -27,17 +26,23 @@ class Sign_In : AppCompatActivity() {
 
         btn_login.setOnClickListener {
             btn_login.isEnabled = false
+            btn_register.isEnabled = false
             btn_login.text = "Loading"
 
-            if(et_username.text.toString().isNullOrEmpty() || et_password.text.toString().isNullOrEmpty()){
+            if(et_username.text.toString().isEmpty() || et_password.text.toString().isEmpty()){
                 Toast.makeText(applicationContext, "Field cannot be blank!", Toast.LENGTH_SHORT).show()
                 btn_login.isEnabled = true
+                btn_register.isEnabled = true
                 btn_login.text = "Masuk"
             } else {
-                mDatabase = FirebaseDatabase.getInstance().getReference().child("User").child(et_username.text.toString())
+                mDatabase = FirebaseDatabase.getInstance().reference.child("User").child(et_username.text.toString())
                 mDatabase.addListenerForSingleValueEvent(object : ValueEventListener {
                     override fun onCancelled(p0: DatabaseError) {
                         Toast.makeText(applicationContext, "Error, please try again!", Toast.LENGTH_SHORT).show()
+
+                        btn_login.isEnabled = true
+                        btn_register.isEnabled = true
+                        btn_login.text = "Masuk"
                     }
 
                     override fun onDataChange(p0: DataSnapshot) {
@@ -45,6 +50,7 @@ class Sign_In : AppCompatActivity() {
                             var password = p0.child("password").getValue().toString()
                             if(et_password.text.toString() == password) {
                                 val sharedPreferences = getSharedPreferences(USERNAME_KEY, Context.MODE_PRIVATE)
+                                //bisa tambah shared preferences lain misal nama, email, balance
                                 sharedPreferences.edit().putString("username", et_username.text.toString()).apply()
 
                                 val intent = Intent(this@Sign_In, Home::class.java)
@@ -53,18 +59,17 @@ class Sign_In : AppCompatActivity() {
                             } else {
                                 Toast.makeText(applicationContext, "Wrong username or password!", Toast.LENGTH_SHORT).show()
                                 btn_login.isEnabled = true
+                                btn_register.isEnabled = true
                                 btn_login.text = "Masuk"
                             }
                         } else {
                             Toast.makeText(applicationContext, "No username found!", Toast.LENGTH_SHORT).show()
                             btn_login.isEnabled = true
+                            btn_register.isEnabled = true
                             btn_login.text = "Masuk"
                         }
                     }
-
                 })
-
-
             }
         }
     }
