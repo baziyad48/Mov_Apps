@@ -108,7 +108,7 @@ class Fragment_Home : Fragment() {
 
                 if(movieList.isNotEmpty()) {
                     rv_now_playing.adapter = Adapter_Film(movieList) {
-                        val intent = Intent(context, Movie_Details::class.java).putExtra("data", it)
+                        val intent = Intent(context, Movie_Details::class.java).putExtra("data", it).putExtra("flag", true)
                         startActivity(intent)
                     }
                 }

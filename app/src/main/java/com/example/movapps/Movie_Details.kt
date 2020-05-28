@@ -4,6 +4,8 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movapps.adapter.Adapter_Cast
@@ -40,6 +42,10 @@ class Movie_Details : AppCompatActivity() {
 
         btn_back.setOnClickListener {
             onBackPressed()
+        }
+
+        if(intent.getBooleanExtra("flag", false)){
+            btn_select.visibility = View.VISIBLE
         }
 
         btn_select.setOnClickListener {

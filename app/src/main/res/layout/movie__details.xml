@@ -19,6 +19,7 @@
         android:text="@string/pilih_kursi"
         android:textColor="@color/white"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
