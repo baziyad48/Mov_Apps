@@ -10,8 +10,7 @@ import android.util.Log
 import android.view.View
 import android.webkit.MimeTypeMap
 import android.widget.Toast
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.squareup.picasso.Picasso
@@ -30,6 +29,9 @@ class Sign_Up_Photo : AppCompatActivity() {
         var mStorage: StorageReference
         var mDatabase: DatabaseReference
 
+        val sharedPreferences = getSharedPreferences("MOV_APPS", Context.MODE_PRIVATE)
+        val intent = Intent(this@Sign_Up_Photo, Home::class.java)
+
         btn_back.setOnClickListener {
             onBackPressed()
         }
@@ -45,8 +47,8 @@ class Sign_Up_Photo : AppCompatActivity() {
             btn_save.isEnabled = false
             btn_skip.isEnabled = false
 
-            if(intent.extras == null) {
-                Toast.makeText(applicationContext, "Error, please go to previous page!", Toast.LENGTH_SHORT).show()
+            if (intent.extras == null) {
+                Toast.makeText(applicationContext,"Error, please go to previous page!", Toast.LENGTH_SHORT).show()
                 btn_save.text = "Simpan"
                 btn_save.visibility = View.INVISIBLE
 
@@ -71,13 +73,42 @@ class Sign_Up_Photo : AppCompatActivity() {
                         mDatabase.ref.child("username").setValue(intent.getStringExtra("username"))
                     }
                 }.addOnCompleteListener {
-                    val sharedPreferences = getSharedPreferences("MOV_APPS", Context.MODE_PRIVATE)
                     sharedPreferences.edit().putString("username", intent.getStringExtra("username")).apply()
-
-                    val intent = Intent(this@Sign_Up_Photo, Home::class.java)
                     startActivity(intent)
                     finishAffinity()
                 }
+            }
+        }
+
+        btn_skip.setOnClickListener {
+            btn_skip.text = "Loading"
+            btn_skip.isEnabled = false
+
+            if (intent.extras == null) {
+                Toast.makeText(applicationContext,"Error, please go to previous page!", Toast.LENGTH_SHORT).show()
+                btn_skip.isEnabled = true
+                btn_skip.text = "Lewati"
+            } else {
+                mDatabase = FirebaseDatabase.getInstance().reference.child("User").child(intent.getStringExtra("username"))
+                mDatabase.addListenerForSingleValueEvent(object : ValueEventListener {
+                    override fun onCancelled(p0: DatabaseError) {
+                        Toast.makeText(applicationContext,"Error, please go to previous page!", Toast.LENGTH_SHORT).show()
+                        btn_skip.isEnabled = true
+                        btn_skip.text = "Lewati"
+                    }
+
+                    override fun onDataChange(p0: DataSnapshot) {
+                        p0.ref.child("balance").setValue(500)
+                        p0.ref.child("email").setValue(intent.getStringExtra("email"))
+                        p0.ref.child("name").setValue(intent.getStringExtra("name"))
+                        p0.ref.child("password").setValue(intent.getStringExtra("password"))
+                        p0.ref.child("username").setValue(intent.getStringExtra("username"))
+
+                        sharedPreferences.edit().putString("username", intent.getStringExtra("username")).apply()
+                        startActivity(intent)
+                        finishAffinity()
+                    }
+                })
             }
         }
     }
@@ -91,7 +122,7 @@ class Sign_Up_Photo : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if(requestCode == 1 && resultCode == Activity.RESULT_OK && data != null && data.data != null) {
+        if (requestCode == 1 && resultCode == Activity.RESULT_OK && data != null && data.data != null) {
             img_location = data.data!!
             Picasso.get().load(img_location).centerCrop().fit().into(img_avatar)
         }
