@@ -8,7 +8,7 @@
     tools:context=".Movie_Details">
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/btn_select"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -24,92 +24,92 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView19"
+        android:id="@+id/img_backdrop"
         android:layout_width="wrap_content"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:contentDescription="@string/backdrop"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/backdrop_shazam" />
 
     <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/btn_play"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
         android:contentDescription="@string/play"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView19"
+        app:layout_constraintBottom_toBottomOf="@+id/img_backdrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/play" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/kanit_bold"
-        tools:text="@string/shazam"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+        app:layout_constraintTop_toBottomOf="@+id/img_backdrop"
+        tools:text="@string/shazam" />
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/tv_genre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto_light"
-        tools:text="@string/genre"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        tools:text="@string/genre" />
 
     <ImageView
-        android:id="@+id/imageView21"
+        android:id="@+id/img_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/rating"
-        app:layout_constraintEnd_toStartOf="@+id/textView24"
-        app:layout_constraintTop_toBottomOf="@+id/imageView19"
+        app:layout_constraintEnd_toStartOf="@+id/tv_rating"
+        app:layout_constraintTop_toBottomOf="@+id/img_backdrop"
         app:srcCompat="@drawable/star" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/tv_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/roboto_light"
-        tools:text="@string/rating"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+        app:layout_constraintTop_toBottomOf="@+id/img_backdrop"
+        tools:text="@string/rating" />
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/tv_description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/roboto_light"
-        tools:text="@string/sinopsis"
         android:lineSpacingMultiplier="1.5"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_genre"
+        tools:text="@string/sinopsis" />
 
     <TextView
         android:id="@+id/textView31"
@@ -122,10 +122,10 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_description" />
 
     <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -136,12 +136,14 @@
         app:srcCompat="@drawable/back" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_cast"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/button11"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_select"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView31" />
