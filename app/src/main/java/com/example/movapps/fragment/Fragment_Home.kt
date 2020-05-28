@@ -59,7 +59,7 @@ class Fragment_Home : Fragment() {
                 rv_now_playing.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
                 getMovie()
 
-                rv_coming_soon.layoutManager = LinearLayoutManager(context!!.applicationContext)
+                rv_coming_soon.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
                 getUpcoming()
             }
         })
