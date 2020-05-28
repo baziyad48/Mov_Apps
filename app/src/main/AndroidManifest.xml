@@ -24,12 +24,12 @@
         <activity android:name=".Chair_Selection" />
         <activity android:name=".Movie_Details" />
         <activity android:name=".Home" />
-        <activity android:name=".Sign_Up_Photo" />
-        <activity android:name=".Sign_Up" />
-        <activity android:name=".Sign_In" />
-        <activity android:name=".Onboarding_Three" />
-        <activity android:name=".Onboarding_Two" />
-        <activity android:name=".Onboarding_One" />
+        <activity android:name=".sign_up.Sign_Up_Photo" />
+        <activity android:name=".sign_up.Sign_Up" />
+        <activity android:name=".sign_in.Sign_In" />
+        <activity android:name=".onboarding.Onboarding_Three" />
+        <activity android:name=".onboarding.Onboarding_Two" />
+        <activity android:name=".onboarding.Onboarding_One" />
         <activity android:name=".Splash_Screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.example.movapps
+package com.example.movapps.sign_up
 
 import android.app.Activity
 import android.content.Context
@@ -10,6 +10,8 @@ import android.util.Log
 import android.view.View
 import android.webkit.MimeTypeMap
 import android.widget.Toast
+import com.example.movapps.Home
+import com.example.movapps.R
 import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference

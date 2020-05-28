@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import com.example.movapps.fragment.Fragment_Home
+import com.example.movapps.fragment.Fragment_Settings
+import com.example.movapps.fragment.Fragment_Tickets
 import kotlinx.android.synthetic.main.home.*
 
 class Home : AppCompatActivity() {

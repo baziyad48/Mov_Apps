@@ -1,14 +1,15 @@
-package com.example.movapps
+package com.example.movapps.sign_in
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.movapps.Home
+import com.example.movapps.R
+import com.example.movapps.sign_up.Sign_Up
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.sign__in.*
-import java.lang.ref.Reference
 
 class Sign_In : AppCompatActivity() {
 

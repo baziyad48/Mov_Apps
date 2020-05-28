@@ -1,9 +1,10 @@
-package com.example.movapps
+package com.example.movapps.sign_up
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.movapps.R
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.sign__up.*
 import kotlinx.android.synthetic.main.sign__up.et_password

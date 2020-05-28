@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
+import com.example.movapps.onboarding.Onboarding_One
 import kotlinx.android.synthetic.main.splash_screen.*
 
 class Splash_Screen : AppCompatActivity() {
