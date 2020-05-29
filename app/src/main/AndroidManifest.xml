@@ -18,7 +18,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Settings"></activity>
+        <activity android:name=".Pay_Success"></activity>
+        <activity android:name=".Settings" />
         <activity android:name=".Tickets" />
         <activity android:name=".Wallet" />
         <activity android:name=".Edit_Profile" />

@@ -8,7 +8,7 @@
     tools:context=".Chair_Selection">
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView28"
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/btn_next"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -55,6 +55,7 @@
         android:text="@string/beli"
         android:textColor="@color/white"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -70,7 +71,7 @@
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
         app:srcCompat="@drawable/layar" />
 
     <TextView
@@ -190,7 +191,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView18"
@@ -199,7 +200,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView19"
@@ -207,7 +208,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <TextView
             android:id="@+id/textView36"
@@ -228,7 +229,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView21"
@@ -237,7 +238,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView22"
@@ -245,7 +246,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
     </LinearLayout>
 
     <LinearLayout
@@ -267,7 +268,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView24"
@@ -276,7 +277,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView25"
@@ -284,7 +285,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <TextView
             android:id="@+id/textView37"
@@ -305,7 +306,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView28"
@@ -314,7 +315,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView29"
@@ -322,7 +323,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
     </LinearLayout>
 
     <LinearLayout
@@ -344,7 +345,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView31"
@@ -353,7 +354,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView32"
@@ -361,7 +362,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <TextView
             android:id="@+id/textView38"
@@ -382,7 +383,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView35"
@@ -391,7 +392,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView36"
@@ -399,7 +400,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
     </LinearLayout>
 
     <LinearLayout
@@ -421,7 +422,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView38"
@@ -430,7 +431,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView39"
@@ -438,7 +439,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <TextView
             android:id="@+id/textView39"
@@ -459,7 +460,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView42"
@@ -468,7 +469,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView43"
@@ -476,7 +477,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
     </LinearLayout>
 
     <LinearLayout
@@ -498,7 +499,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView45"
@@ -507,7 +508,7 @@
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <ImageView
             android:id="@+id/imageView46"
@@ -515,7 +516,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
 
         <TextView
             android:id="@+id/textView40"
@@ -530,20 +531,22 @@
             android:textSize="16sp" />
 
         <ImageView
-            android:id="@+id/imageView48"
+            android:id="@+id/chair_one"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
+            android:clickable="true"
             android:contentDescription="@string/chair"
             app:srcCompat="@drawable/chair_empty" />
 
         <ImageView
-            android:id="@+id/imageView49"
+            android:id="@+id/chair_two"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginEnd="15dp"
             android:layout_weight="1"
+            android:clickable="true"
             android:contentDescription="@string/chair"
             app:srcCompat="@drawable/chair_empty" />
 
@@ -553,7 +556,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/chair"
-            app:srcCompat="@drawable/chair_empty" />
+            app:srcCompat="@drawable/chair_booked" />
     </LinearLayout>
 
     <ImageView
@@ -562,7 +565,7 @@
         android:layout_height="30dp"
         android:layout_marginBottom="32dp"
         android:contentDescription="@string/note"
-        app:layout_constraintBottom_toTopOf="@+id/button12"
+        app:layout_constraintBottom_toTopOf="@+id/btn_next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
