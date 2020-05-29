@@ -103,11 +103,13 @@ class Pay_Screen : AppCompatActivity() {
 
             })
 
+            finish()
             val intent = Intent(this@Pay_Screen, Pay_Success::class.java)
             startActivity(intent)
         }
 
         btn_cancel.setOnClickListener {
+            finish()
             val intent = Intent(this@Pay_Screen, Home::class.java)
             startActivity(intent)
         }

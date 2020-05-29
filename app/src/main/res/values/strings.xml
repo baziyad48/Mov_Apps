@@ -68,4 +68,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="success_caption">Tiket berhasil dibeli dan silakan\nmenikmati filmnya.</string>
+    <string name="watching">Happy Watching!</string>
+    <string name="lihat">Lihat Tiket</string>
 </resources>
