@@ -54,12 +54,6 @@ class Movie_Details : AppCompatActivity() {
         }
 
         rv_cast.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        getCast()
-
-
-    }
-
-    private fun getCast() {
         mDatabase.addValueEventListener(object : ValueEventListener{
             override fun onCancelled(p0: DatabaseError) {
                 Toast.makeText(this@Movie_Details, "Error, please re-open application!", Toast.LENGTH_LONG).show()
@@ -79,5 +73,7 @@ class Movie_Details : AppCompatActivity() {
             }
 
         })
+
+
     }
 }
