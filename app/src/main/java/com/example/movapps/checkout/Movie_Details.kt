@@ -1,13 +1,13 @@
-package com.example.movapps
+package com.example.movapps.checkout
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.movapps.R
 import com.example.movapps.adapter.Adapter_Cast
 import com.example.movapps.model.Cast
 import com.example.movapps.model.Film

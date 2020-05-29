@@ -1,9 +1,10 @@
-package com.example.movapps
+package com.example.movapps.checkout
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.movapps.R
 import com.example.movapps.model.Film
 import kotlinx.android.synthetic.main.chair__selection.*
 

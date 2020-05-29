@@ -4,11 +4,11 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movapps.adapter.Adapter_Film
 import com.example.movapps.adapter.Adapter_Upcoming
+import com.example.movapps.checkout.Movie_Details
 import com.example.movapps.model.Film
 import com.google.firebase.database.*
 import com.squareup.picasso.Picasso

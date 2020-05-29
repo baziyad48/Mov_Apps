@@ -71,4 +71,9 @@
     <string name="success_caption">Tiket berhasil dibeli dan silakan\nmenikmati filmnya.</string>
     <string name="watching">Happy Watching!</string>
     <string name="lihat">Lihat Tiket</string>
+    <string name="ticket_caption">Film apa saja yang akan anda tonton?</string>
+    <string name="ticket_info">Ticket Info</string>
+    <string name="refund">Refund</string>
+    <string name="code">Booking Code</string>
+    <string name="settings_caption">Keep it up-to-date</string>
 </resources>

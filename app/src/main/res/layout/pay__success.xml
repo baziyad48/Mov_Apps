@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkBlue"
-    tools:context=".Pay_Success">
+    tools:context=".checkout.Pay_Success">
 
     <Button
         android:id="@+id/btn_home"
