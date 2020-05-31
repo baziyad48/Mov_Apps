@@ -22,7 +22,6 @@
         <activity android:name=".checkout.Pay_Success" />
         <activity android:name=".settings.Settings" />
         <activity android:name=".my_ticket.Tickets" />
-        <activity android:name=".Wallet" />
         <activity android:name=".settings.Edit_Profile" />
         <activity android:name=".checkout.Pay_Screen" />
         <activity android:name=".checkout.Chair_Selection" />

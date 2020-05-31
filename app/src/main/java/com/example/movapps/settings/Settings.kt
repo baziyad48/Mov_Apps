@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.movapps.R
-import com.example.movapps.Wallet
 import com.example.movapps.checkout.Home
 import com.example.movapps.my_ticket.Tickets
 import com.example.movapps.onboarding.Splash_Screen
@@ -58,10 +57,6 @@ class Settings : AppCompatActivity() {
             startActivity(intent)
         }
 
-        tv_top_up.setOnClickListener {
-            val intent = Intent(this@Settings, Wallet::class.java)
-            startActivity(intent)
-        }
 
         tv_logout.setOnClickListener {
             sharedPreferences.edit().putString("username", null).apply()
