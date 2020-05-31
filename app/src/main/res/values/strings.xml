@@ -76,4 +76,9 @@
     <string name="refund">Refund</string>
     <string name="code">Booking Code</string>
     <string name="settings_caption">Keep it up-to-date</string>
+    <string name="edit">Edit Profile</string>
+    <string name="notification">Notification Settings</string>
+    <string name="isi_saldo">Top Up Balance</string>
+    <string name="help">Help</string>
+    <string name="logout">Sign Out</string>
 </resources>

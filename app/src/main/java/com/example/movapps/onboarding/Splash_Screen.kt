@@ -1,4 +1,4 @@
-package com.example.movapps
+package com.example.movapps.onboarding
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
-import com.example.movapps.onboarding.Onboarding_One
+import com.example.movapps.R
+import com.example.movapps.checkout.Home
 import kotlinx.android.synthetic.main.splash_screen.*
 
 class Splash_Screen : AppCompatActivity() {
@@ -15,7 +16,9 @@ class Splash_Screen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splash_screen)
 
-        val animation = AnimationUtils.loadAnimation(this, R.anim.splash)
+        val animation = AnimationUtils.loadAnimation(this,
+            R.anim.splash
+        )
         app_logo.startAnimation(animation)
 
         val sharedPreferences = getSharedPreferences("MOV_APPS", Context.MODE_PRIVATE)

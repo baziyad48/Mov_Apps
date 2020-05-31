@@ -5,9 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import com.example.movapps.Home
 import com.example.movapps.R
-import com.example.movapps.Tickets
+import com.example.movapps.my_ticket.Tickets
 import kotlinx.android.synthetic.main.pay__success.*
 
 class Pay_Success : AppCompatActivity() {

@@ -1,8 +1,9 @@
-package com.example.movapps
+package com.example.movapps.my_ticket
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.movapps.R
 import com.example.movapps.model.Ticket
 import kotlinx.android.synthetic.main.ticket__details.*
 

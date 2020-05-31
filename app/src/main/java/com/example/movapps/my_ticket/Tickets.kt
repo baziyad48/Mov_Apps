@@ -1,4 +1,4 @@
-package com.example.movapps
+package com.example.movapps.my_ticket
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.movapps.R
+import com.example.movapps.settings.Settings
 import com.example.movapps.adapter.Adapter_Ticket
+import com.example.movapps.checkout.Home
 import com.example.movapps.model.Ticket
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.tickets.*

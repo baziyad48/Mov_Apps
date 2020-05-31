@@ -5,7 +5,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.movapps.Home
 import com.example.movapps.R
 import com.example.movapps.model.Film
 import com.google.firebase.database.*

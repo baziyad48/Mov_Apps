@@ -18,7 +18,7 @@ class Sign_Up : AppCompatActivity() {
 
         var mDatabase: DatabaseReference
 
-        textView15.setOnClickListener {
+        btn_back.setOnClickListener {
             onBackPressed()
         }
 

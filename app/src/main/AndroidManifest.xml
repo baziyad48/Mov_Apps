@@ -18,23 +18,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Ticket_Details"></activity>
+        <activity android:name=".my_ticket.Ticket_Details"></activity>
         <activity android:name=".checkout.Pay_Success" />
-        <activity android:name=".Settings" />
-        <activity android:name=".Tickets" />
+        <activity android:name=".settings.Settings" />
+        <activity android:name=".my_ticket.Tickets" />
         <activity android:name=".Wallet" />
-        <activity android:name=".Edit_Profile" />
+        <activity android:name=".settings.Edit_Profile" />
         <activity android:name=".checkout.Pay_Screen" />
         <activity android:name=".checkout.Chair_Selection" />
         <activity android:name=".checkout.Movie_Details" />
-        <activity android:name=".Home" />
+        <activity android:name=".checkout.Home" />
         <activity android:name=".sign_up.Sign_Up_Photo" />
         <activity android:name=".sign_up.Sign_Up" />
         <activity android:name=".sign_in.Sign_In" />
         <activity android:name=".onboarding.Onboarding_Three" />
         <activity android:name=".onboarding.Onboarding_Two" />
         <activity android:name=".onboarding.Onboarding_One" />
-        <activity android:name=".Splash_Screen">
+        <activity android:name=".onboarding.Splash_Screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
