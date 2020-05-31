@@ -1,12 +1,14 @@
-package com.example.movapps
+package com.example.movapps.checkout
 
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.movapps.R
+import com.example.movapps.settings.Settings
+import com.example.movapps.my_ticket.Tickets
 import com.example.movapps.adapter.Adapter_Film
 import com.example.movapps.adapter.Adapter_Upcoming
 import com.example.movapps.model.Film

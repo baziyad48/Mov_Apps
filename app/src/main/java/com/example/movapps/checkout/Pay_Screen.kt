@@ -1,10 +1,11 @@
-package com.example.movapps
+package com.example.movapps.checkout
 
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.movapps.R
 import com.example.movapps.model.Film
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.pay__screen.*
@@ -20,6 +21,7 @@ class Pay_Screen : AppCompatActivity() {
 
         val data = intent.getParcelableExtra<Film>("data")
         val ticket = intent.getStringArrayListExtra("ticket")
+        val charPool : List<Char> = ('a'..'z') + ('A'..'Z') + ('0'..'9')
         var balance:Int = 0
 
         tv_title.text = data.title
@@ -80,13 +82,21 @@ class Pay_Screen : AppCompatActivity() {
 
                 override fun onDataChange(p0: DataSnapshot) {
                     p0.ref.child("id_ticket").setValue(data.title + "_" + System.currentTimeMillis())
+                    p0.ref.child("title").setValue(tv_title.text.toString())
+                    p0.ref.child("backdrop").setValue(data.backdrop)
                     p0.ref.child("date").setValue(tv_date.text.toString())
                     p0.ref.child("location").setValue(tv_location.text.toString())
                     p0.ref.child("seat").setValue(tv_seat.text.toString())
-                    p0.ref.child("price_seat").setValue(price_seat.text.toString())
+                    p0.ref.child("seat_price").setValue(price_seat.text.toString())
                     p0.ref.child("promo").setValue(tv_promo.text.toString())
                     p0.ref.child("promo_price").setValue(price_promo.text.toString())
                     p0.ref.child("total").setValue(tv_total.text.toString())
+
+                    val randomString = (1..8)
+                        .map { i -> kotlin.random.Random.nextInt(0, charPool.size) }
+                        .map(charPool::get)
+                        .joinToString("")
+                    p0.ref.child("code").setValue(randomString)
                 }
 
             })

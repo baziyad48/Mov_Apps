@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkBlue"
-    tools:context=".Chair_Selection">
+    tools:context=".checkout.Chair_Selection">
 
     <ImageView
         android:id="@+id/btn_back"

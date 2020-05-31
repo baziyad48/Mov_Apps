@@ -10,7 +10,7 @@ import android.util.Log
 import android.view.View
 import android.webkit.MimeTypeMap
 import android.widget.Toast
-import com.example.movapps.Home
+import com.example.movapps.checkout.Home
 import com.example.movapps.R
 import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
@@ -32,7 +32,7 @@ class Sign_Up_Photo : AppCompatActivity() {
         var mDatabase: DatabaseReference
 
         val sharedPreferences = getSharedPreferences("MOV_APPS", Context.MODE_PRIVATE)
-        val intent = Intent(this@Sign_Up_Photo, Home::class.java)
+
 
         btn_back.setOnClickListener {
             onBackPressed()
@@ -76,6 +76,7 @@ class Sign_Up_Photo : AppCompatActivity() {
                     }
                 }.addOnCompleteListener {
                     sharedPreferences.edit().putString("username", intent.getStringExtra("username")).apply()
+                    val intent = Intent(this@Sign_Up_Photo, Home::class.java)
                     startActivity(intent)
                     finishAffinity()
                 }

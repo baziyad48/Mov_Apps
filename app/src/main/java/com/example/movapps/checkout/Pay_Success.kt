@@ -1,10 +1,12 @@
-package com.example.movapps
+package com.example.movapps.checkout
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import com.example.movapps.R
+import com.example.movapps.my_ticket.Tickets
 import kotlinx.android.synthetic.main.pay__success.*
 
 class Pay_Success : AppCompatActivity() {
@@ -13,8 +15,12 @@ class Pay_Success : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pay__success)
 
-        val top_down: Animation = AnimationUtils.loadAnimation(this, R.anim.top_down)
-        val bottom_up: Animation = AnimationUtils.loadAnimation(this, R.anim.bottom_up)
+        val top_down: Animation = AnimationUtils.loadAnimation(this,
+            R.anim.top_down
+        )
+        val bottom_up: Animation = AnimationUtils.loadAnimation(this,
+            R.anim.bottom_up
+        )
 
         success_image.startAnimation(top_down)
         success_tagline.startAnimation(top_down)

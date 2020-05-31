@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkBlue"
-    tools:context=".Movie_Details">
+    tools:context=".checkout.Movie_Details">
 
     <Button
         android:id="@+id/btn_select"
