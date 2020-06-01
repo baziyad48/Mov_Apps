@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.example.movapps.R
 import com.example.movapps.model.Film
@@ -62,6 +63,11 @@ class Pay_Screen : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
                 balance = p0.child("balance").value.toString().toInt()
                 tv_balance.text = "IDR " + balance + "K"
+                if(balance > (ticket.size * 25)) {
+                    btn_pay.visibility = View.VISIBLE
+                } else {
+                    tv_warning.visibility = View.VISIBLE
+                }
             }
 
         })

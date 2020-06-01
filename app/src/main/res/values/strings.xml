@@ -81,4 +81,5 @@
     <string name="isi_saldo">Top Up Balance</string>
     <string name="help">Help</string>
     <string name="logout">Sign Out</string>
+    <string name="warning">Saldo anda tidak mencukupi\nuntuk melakukan transaksi ini</string>
 </resources>
